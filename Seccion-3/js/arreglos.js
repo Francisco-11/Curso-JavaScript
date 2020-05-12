@@ -22,8 +22,14 @@ let arregloCosas = [
     function(){
 
     },
-    ()=>{}
+    ()=>{},
+    { a: 1},
+    ['X','Megaman','Zero','Chuma', [
+        'Goodman',
+        'Xmen'
+    ]]
 ]; 
 
 console.log(arregloCosas);
+console.log(arregloCosas[7][4][0]);
 
