@@ -35,3 +35,33 @@ console.log('Vivo', personaje[x]);
 
 
 console.log('Última película', personaje['ultima-pelicula']);
+
+
+// Mas detalles
+// Poder eliminar una propiedad:
+delete personaje.edad;
+console.log(personaje);
+
+personaje.casado = true;
+
+// Trabajar el objeto como un arreglo
+// El resultado son pares de valores, sirve mucho para poder recorrer el objeto como arreglo
+const entriesPares = Object.entries(personaje);
+console.log(entriesPares);
+
+console.log(personaje);
+
+// Para hacer un bloqueo de las propiedades y de las modificaciones
+Object.freeze(personaje);
+// Este congela a las asginaciones directas pero no a las inmersas dentro de los objectos
+personaje.dinero = 10000000;
+personaje.casado = false;
+personaje.direccion.ubicacion = 'Costa Rica';
+console.log(personaje);
+
+// Se necesita un listado de todas las propiedades que tiene un objeto
+const propiedades = Object.getOwnPropertyNames(personaje);
+console.log(propiedades);
+// Si se necesitan los valores
+const valores = Object.values(personaje);
+console.log({valores});
