@@ -1,5 +1,8 @@
+import { obtenerChiste } from './js/http-provider';
 
-const jokeUrl = 'https://api.chucknorris.io/jokes/random';
+
+
+// const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
 // fetch( jokeUrl ).then( resp => {
     // Forma 1:
@@ -19,13 +22,14 @@ const jokeUrl = 'https://api.chucknorris.io/jokes/random';
 
 // Pro - Tip
 
-fetch(jokeUrl)
-    .then(resp => resp.json())
-    .then(({id,value})=>{
-        console.log(id,value);
-    });
+// fetch(jokeUrl)
+//     .then(resp => resp.json())
+//     .then(({id,value})=>{
+//         console.log(id,value);
+//     });
 
 
+obtenerChiste().then(console.log);
 
 
 
