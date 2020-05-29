@@ -9,9 +9,9 @@ const obtenerChiste = async () => {
             throw 'No se pudo realizar la petición';
         }
         
-        const { icon_url, id_value } = await resp.json(); 
-
-        return {icon_url, id_value};
+        const { icon_url, id, value } = await resp.json(); 
+        
+        return {icon_url, id, value};
 
     }catch (err){
         throw err;
